@@ -102,6 +102,40 @@ function App() {
     setNewListView(true);
   };
 
+  const handleMoveItem = (item, fromList, toList = "3") => {
+    setLists((prevLists) => {
+      const updatedLists = { ...prevLists };
+
+      // Remove the item from the source list
+      const updatedFromList = (updatedLists[fromList] || []).filter(
+        (i) => i.id !== item.id
+      );
+
+      // Ensure the target list exists in the lists object
+      if (!updatedLists[toList]) {
+        updatedLists[toList] = [];
+      }
+
+      // Add the item to the target list
+      if (!updatedLists[toList].some((i) => i.id === item.id)) {
+        updatedLists[toList].push(item);
+      }
+
+      // Return the updated lists
+      return {
+        ...updatedLists,
+        [fromList]: updatedFromList, // Update the source list
+      };
+    });
+
+    // Ensure List 3 is included in the list order
+    setListOrder((prevOrder) => {
+      if (!prevOrder.includes(toList)) {
+        return [...prevOrder, toList];
+      }
+      return prevOrder;
+    });
+  };
   const handleCancel = () => {
     setShowCreateNewList(true);
     setNewListView(false);
