@@ -87,25 +87,6 @@ The application fetches data from the following API endpoint:
 
 - **API URL**: `https://apis.ccbp.in/list-creation/lists`
 
-Response Example:
-```json
-{
-  "lists": [
-    {
-      "id": 1,
-      "name": "Item 1",
-      "description": "Description 1",
-      "list_number": 1
-    },
-    {
-      "id": 2,
-      "name": "Item 2",
-      "description": "Description 2",
-      "list_number": 2
-    }
-  ]
-}
-```
 
 ### Project Structure Overview
 
