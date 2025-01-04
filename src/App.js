@@ -54,7 +54,6 @@ function App() {
     setSelectedLists(updatedSelection);
   };
 
-  
   const handleCreateNewList = () => {
     if (selectedLists.length !== 2) {
       let alertForCheckEl = document.getElementById("alertForCheck");
