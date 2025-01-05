@@ -1,137 +1,70 @@
-# List Creation Application
+# Getting Started with Create React App
 
-This React application allows users to fetch lists from an API, view and manage them, and create new lists by merging selected lists. It provides a dynamic interface to interact with list items, rearrange them, and create new lists based on specific criteria.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features
+## Available Scripts
 
-1. **Data Fetching**:
-   - Fetches lists and items from an external API.
-   - Groups fetched data by `list_number` and sorts them for easy rendering.
+In the project directory, you can run:
 
-2. **Error Handling**:
-   - Displays an error view with retry functionality in case of failed API calls.
+### `npm start`
 
-3. **Dynamic List Selection**:
-   - Allows users to select two lists for creating a new list.
-   - Validates the selection to ensure exactly two lists are selected.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-4. **List Creation**:
-   - Merges two selected lists to create a new list.
-   - Dynamically inserts the new list in the appropriate order.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-5. **Interactive UI**:
-   - Uses loader spinners for loading states.
-   - Includes buttons for creating new lists, canceling actions, and updating the list view.
+### `npm test`
 
-6. **Item Management**:
-   - Allows users to move items between lists.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Technologies Used
+### `npm run build`
 
-- **React**: For building the user interface.
-- **Axios**: For API calls.
-- **React Loader Spinner**: For displaying loading states.
-- **CSS**: For styling.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Folder Structure
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-.
-├── src
-│   ├── components
-│   │   ├── ErrorView.js          # Displays error message with retry button
-│   │   ├── ActionButtons.js      # Cancel and Update buttons component
-│   ├── App.css                  # Styling for the application
-│   ├── App.js                   # Main application component
-│   └── index.js                 # Application entry point
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Getting Started
+### `npm run eject`
 
-### Prerequisites
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Ensure you have the following installed:
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- Node.js (>= 14.x)
-- npm or yarn
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### Installation
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
+## Learn More
 
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Running the Application
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-1. Start the development server:
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+### Code Splitting
 
-2. Open the application in your browser at [http://localhost:3000](http://localhost:3000).
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### API
+### Analyzing the Bundle Size
 
-The application fetches data from the following API endpoint:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- **API URL**: `https://apis.ccbp.in/list-creation/lists`
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Project Structure Overview
+### Advanced Configuration
 
-#### App Component
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-The main component responsible for managing state and rendering the application:
+### Deployment
 
-- **State Variables**:
-  - `loading`: Tracks the loading state.
-  - `error`: Tracks whether an error occurred.
-  - `data`: Stores raw API response data.
-  - `lists`: Grouped list data.
-  - `listOrder`: Ordered list numbers for rendering.
-  - `selectedLists`: Tracks user-selected lists.
-  - `newListView`: Controls whether the new list view is displayed.
-  - `newListKey`: Stores the key of the newly created list.
-  - `showCreateNewList`: Controls visibility of the "Create New List" button.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-- **Functions**:
-  - `fetchData`: Fetches and processes list data from the API.
-  - `handleListSelection`: Toggles selection of a list.
-  - `handleCreateNewList`: Validates and creates a new list by merging two selected lists.
-  - `handleCancel`: Resets the view to its initial state.
-  - `handleUpdate`: Updates the list view after changes.
+### `npm run build` fails to minify
 
-#### ErrorView Component
-
-Displays an error message with a retry button. Useful for handling API call failures.
-
-#### ActionButtons Component
-
-Provides "Cancel" and "Update" buttons for user interaction.
-
-## Styling
-
-The application uses a CSS file (`App.css`) for styling, providing a clean and responsive UI.
-
-## Future Enhancements
-
-1. Add drag-and-drop functionality for moving items between lists.
-2. Implement pagination for large datasets.
-3. Enhance error messages with more detailed descriptions.
-4. Provide a search/filter feature for lists and items.
-
----
-
-Enjoy managing your lists!
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

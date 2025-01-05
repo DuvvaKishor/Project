@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { RotatingLines } from "react-loader-spinner";
 import axios from "axios";
@@ -18,10 +19,13 @@ function App() {
   const [newListKey, setNewListKey] = useState(null);
   const [showCreateNewList, setShowCreateNewList] = useState(true);
 
+  console.log(data)
+  console.log(newListKey)
   useEffect(() => {
     fetchData();
   }, []);
 
+  
   const fetchData = async () => {
     setLoading(true);
     setError(false);
@@ -68,6 +72,7 @@ function App() {
     const newListKey = nextListNumber.toString();
     setNewListKey(newListKey);
 
+    console.log(secondList);
     setLists((prev) => {
       const updatedLists = { ...prev };
       const newOrder = [];
@@ -136,6 +141,7 @@ function App() {
       return prevOrder;
     });
   };
+
   const handleCancel = () => {
     setShowCreateNewList(true);
     setNewListView(false);

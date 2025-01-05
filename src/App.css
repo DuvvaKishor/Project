@@ -45,10 +45,15 @@ body {
 }
 
 .add-new-list-button {
-  width: 200px;
-  height: 30px;
-  font-size: 12px;
+  width: 160px;
+  height: 40px;
+  font-size: 14px;
+  font-family: "Roboto";
   text-align: center;
+  color: #ffffff;
+  background-color: rgb(53, 72, 200);
+  border: 0px;
+  border-radius: 8px;
 }
 
 .list-selection {
