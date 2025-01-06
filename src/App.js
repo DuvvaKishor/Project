@@ -186,9 +186,10 @@ function App() {
                 >
                   Create a New List
                 </button>
+                <span id="alertForCheck"></span>
               </>
             )}
-            <span id="alertForCheck"></span>
+            
           </div>
 
           <div className={`lists-container ${newListView ? "row" : ""}`}>
